@@ -8,7 +8,7 @@
 
 ### Решение 1
 [haproxy.cfg](./files/task1_haproxy.cfg)
-```sh
+```
 global
 	log /dev/log	local0
 	log /dev/log	local1 notice
@@ -69,7 +69,7 @@ listen web_tcp
 
 ### Решение 2
 [haproxy.cfg](./files/task2_haproxy.cfg)
-```sh
+```
 global
 	log /dev/log	local0
 	log /dev/log	local1 notice
@@ -132,7 +132,7 @@ backend web_servers    # секция бэкенд
         http-check send meth GET uri /index.html
         server s1 127.0.0.1:8081 check weight 2
         server s2 127.0.0.1:8082 check weight 3
-		server s3 127.0.0.1:8083 check weight 4
+	server s3 127.0.0.1:8083 check weight 4
 ```
 ![](./img/task2_1.jpg)
 ![](./img/task2_2.jpg)
